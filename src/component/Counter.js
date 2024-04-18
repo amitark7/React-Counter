@@ -28,6 +28,7 @@ const Counter = () => {
       </button>
       {showModal && (
         <CounterModal
+          showModal={showModal}
           setShowModal={setShowModal}
           counterObj={counterObj}
           startCounter={startCounter}
