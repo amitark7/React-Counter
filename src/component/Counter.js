@@ -5,18 +5,18 @@ const Counter = () => {
   const [showModal, setShowModal] = useState(false);
   const [counterTotal, setCounterTotal] = useState(0);
   const [counterObj, setCounterObj] = useState({
-    interValRef: null,
+    intervalRef: null,
     isStart: false,
   });
   const startCounter = () => {
-    const interValRef = setInterval(() => {
+    const intervalRef = setInterval(() => {
       setCounterTotal((prevCounter) => prevCounter + 1);
     }, 1000);
-    setCounterObj({ interValRef, isStart: true });
+    setCounterObj({ intervalRef, isStart: true });
   };
   const stopCounter = () => {
-    clearInterval(counterObj.interValRef);
-    setCounterObj({ interValRef: null, isStart: false });
+    clearInterval(counterObj.intervalRef);
+    setCounterObj({ intervalRef: null, isStart: false });
   };
   return (
     <div className="w-full h-screen flex justify-center items-center text-center text-white bg-slate-600">
